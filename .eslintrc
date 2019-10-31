@@ -1,0 +1,19 @@
+{
+    "parserOptions": {
+        "ecmaVersion": 2018,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+    "rules": {
+        "eqeqeq": "error",
+        "no-unreachable": 2,
+        "complexity": ["error", 20],
+        "semi": "error",
+        "semi-style": ["error", "last"],
+        "no-cond-assign": ["error", "always"],
+        "jsx-quotes": 2,
+        "quotes": ["error", "double", { "avoidEscape": true }]
+    }
+}

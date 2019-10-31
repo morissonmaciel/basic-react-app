@@ -1,11 +1,11 @@
-'use strict'
+"use strict";
 
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const sourceDir = "src";
 
 module.exports = {
-    devtool: '#eval-source-map',
+    devtool: "#eval-source-map",
     
     entry: path.resolve(__dirname, sourceDir, "index"),
 
@@ -19,7 +19,7 @@ module.exports = {
             test: /\.js$/,
             exclude: /node_modules/,
             include: /src/,
-            loader: "babel-loader"            
+            use: ["babel-loader", "eslint-loader"]
         }]
     },
 
@@ -32,6 +32,7 @@ module.exports = {
     devServer: {
         contentBase: path.resolve(__dirname, "public"),
         port: 3000,
+        overlay: true,
         open: "Google Chrome"
     }
-}
+};
