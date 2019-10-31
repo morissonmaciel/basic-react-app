@@ -11,6 +11,17 @@ export const GlobalStyle = createGlobalStyle`
         font-family: "Segoe UI", "Helvetica Neue", sans-serif;
         color: rgb(10, 10, 22);
     }
+
+    pre {
+        padding: 16px;
+        border-radius: 4px;
+        background-color: rgb(246, 248, 250);
+        white-space: pre-wrap;
+    }
+
+    .centered {
+        text-align: center;
+    }
 `;
 
 export const AppContents = styled.div`

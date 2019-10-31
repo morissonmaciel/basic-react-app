@@ -19,6 +19,6 @@ export const AnimatedContainer = styled.div`
 
     &:hover {
         animation-play-state: paused;
-        transform: scale(1.1);
+
     }
 `;

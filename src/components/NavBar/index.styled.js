@@ -6,7 +6,7 @@ export const Container = styled.div`
     flex-flow: column nowrap;
     justify-content: center;
     background-color: rgb(47, 30, 46);
-    width: 100%;
+    width: calc(100% - 32px);
     height: 64px;
     padding: 0 16px;
 `;
