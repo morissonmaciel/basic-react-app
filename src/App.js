@@ -1,6 +1,7 @@
 import React from "react";
 import { NavBar } from "./components/NavBar";
 import { GlobalStyle, AppContents } from "./global/global.styled";
+import ReactLogo from "./assets/images/react-logo.png";
 
 export const App = () => {
     return (
@@ -8,7 +9,9 @@ export const App = () => {
             <GlobalStyle />
             <NavBar />
             <AppContents>
-                <h1>This is a lightweight React app based on a simple and faster structure.</h1>
+                <img src={ReactLogo} width={128} />
+                <br />
+                This is a lightweight React app based on a simple and faster structure.
             </AppContents>
         </>
     );
