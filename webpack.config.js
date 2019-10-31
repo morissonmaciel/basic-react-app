@@ -43,7 +43,7 @@ module.exports = {
         contentBase: path.resolve(__dirname, "public"),
         port: 3000,
         overlay: true,
-        clientLogLevel: 'none',
+        clientLogLevel: "none",
         open: "Google Chrome"
     }
 };
