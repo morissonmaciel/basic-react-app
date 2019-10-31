@@ -14,7 +14,7 @@ export const Home = () => {
             <p className="centered">
                 Start a new project coping contents from repository with command:</p>
             <pre className="centered">
-                $ git clone --bare https://github.com/morissonmaciel/basic-react-app.git [project_name]</pre>
+                $ git clone https://github.com/morissonmaciel/basic-react-app.git [project_name]</pre>
         </ContentView>
     );
 };
