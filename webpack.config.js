@@ -2,6 +2,7 @@
 
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 const sourceDir = "src";
 
 module.exports = {
@@ -10,7 +11,7 @@ module.exports = {
   entry: path.resolve(__dirname, sourceDir, "index"),
 
   output: {
-    path: path.resolve(__dirname, "public", "dist"),
+    path: path.resolve(__dirname, "build", "dist"),
     publicPath: "./",
     filename: "bundle.js"
   },
@@ -54,6 +55,9 @@ module.exports = {
   },
 
   plugins: [
+    new CopyWebpackPlugin([{
+      from: path.resolve(__dirname, "public")
+    }]),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, sourceDir, "./index.html")
     })

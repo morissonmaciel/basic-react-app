@@ -14,6 +14,7 @@
         "@babel/runtime": "^7.7.6",
         "@svgr/webpack": "^5.1.0",
         "babel-loader": "^8.0.6",
+        "copy-webpack-plugin": "^5.1.1",
         "css-loader": "^3.4.2",
         "eslint-loader": "^3.0.3",
         "file-loader": "^4.3.0",
