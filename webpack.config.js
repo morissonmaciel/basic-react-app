@@ -3,17 +3,20 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
+const ServiceWorkerWebpackPlugin = require("workbox-webpack-plugin");
 const sourceDir = "src";
 
 module.exports = {
   devtool: "#eval-source-map",
 
-  entry: path.resolve(__dirname, sourceDir, "index"),
+  entry: {
+    "bundle": path.resolve(__dirname, sourceDir, "index")
+  },
 
   output: {
     path: path.resolve(__dirname, "build", "dist"),
     publicPath: "./",
-    filename: "bundle.js"
+    filename: "[name].js"
   },
 
   module: {
@@ -59,8 +62,11 @@ module.exports = {
       from: path.resolve(__dirname, "public")
     }]),
     new HtmlWebpackPlugin({
+      inject: true,
+      chunks: ["bundle"],
       template: path.resolve(__dirname, sourceDir, "./index.html")
-    })
+    }),
+    new ServiceWorkerWebpackPlugin.GenerateSW()
   ],
 
   devServer: {
