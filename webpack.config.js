@@ -51,8 +51,8 @@ module.exports = {
     },
     {
       type: "javascript/auto",
-      test: /\.json/,
-      use: ["file-loader"],
+      test: /\.json$/,
+      use: ["json-loader"],
     }
     ]
   },
