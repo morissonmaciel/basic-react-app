@@ -1,6 +1,7 @@
 "use strict";
 
 const path = require("path");
+const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const ServiceWorkerWebpackPlugin = require("workbox-webpack-plugin");
@@ -15,7 +16,7 @@ module.exports = {
 
   output: {
     path: path.resolve(__dirname, "build", "dist"),
-    publicPath: "./",
+    publicPath: "/",
     filename: "[name].js"
   },
 
@@ -58,6 +59,11 @@ module.exports = {
   },
 
   plugins: [
+    new webpack.DefinePlugin({
+      "process.env" : {
+        NODE_ENV: JSON.stringify(process.env.NODE_ENV)
+      },
+    }),
     new CopyWebpackPlugin([{
       from: path.resolve(__dirname, "public")
     }]),
