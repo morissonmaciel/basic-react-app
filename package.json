@@ -7,7 +7,7 @@
         "test": "NODE_ENV=test jest --no-cache --config config/jest.config.js"
     },
     "devDependencies": {
-        "@babel/cli": "^7.7.5",
+        "@babel/cli": "^7.12.8",
         "@babel/core": "^7.7.5",
         "@babel/plugin-transform-runtime": "^7.7.6",
         "@babel/preset-env": "^7.7.6",
